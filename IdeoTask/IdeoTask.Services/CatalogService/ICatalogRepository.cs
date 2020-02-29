@@ -1,4 +1,5 @@
-﻿using IdeoTask.Services.Models;
+﻿using IdeoTask.Services.DTO;
+using IdeoTask.Services.Models;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -10,6 +11,7 @@ namespace IdeoTask.Services.CatalogService
     {
         void AddCatalog(Catalog catalog);
         void DeleteCatalog(int id);
-        List<Catalog> GetAllCatalogs();
+        List<CatalogDTO> GetAllCatalogs();
+        CatalogDTO GetCatalogById(int id);
     }
 }

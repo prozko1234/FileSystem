@@ -22,8 +22,4 @@
     <ProjectReference Include="..\IdeoTask.EntityFramework\IdeoTask.EntityFramework.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="DTO\" />
-  </ItemGroup>
-
 </Project>

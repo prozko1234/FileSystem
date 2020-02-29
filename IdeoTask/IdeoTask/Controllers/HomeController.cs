@@ -22,12 +22,12 @@ namespace IdeoTask.Controllers
 
         public IActionResult Index()
         {
-            _catalogRepository.AddCatalog(new Catalog
+            var catalogs = _catalogRepository.GetAllCatalogs();
+            var result = new CatalogViewModel
             {
-                Name = "root",
-                ParentCatalog = null
-            });
-            return View();
+                CatalogDTOs = catalogs
+            };
+            return View(result);
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]

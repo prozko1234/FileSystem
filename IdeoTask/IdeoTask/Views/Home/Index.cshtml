@@ -1,7 +1,12 @@
-﻿@{
+﻿@model IdeoTask.Models.CatalogViewModel
+@{
     ViewData["Title"] = "My task";
 }
 
-<div class="text-center">
-    Hello world!
-</div>
+    <div class="text-center">
+        Hello world!
+        @foreach (var item in Model.CatalogDTOs)
+        {
+            <p>@item.Name   @item.CreatedData</p>
+        }
+    </div>

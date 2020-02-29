@@ -1,5 +1,6 @@
 ﻿using IdeoTask;
 using IdeoTask.EntityFramework;
+using IdeoTask.Services.DTO;
 using IdeoTask.Services.Models;
 using System;
 using System.Collections.Generic;
@@ -28,8 +29,40 @@ namespace IdeoTask.Services.CatalogService
             _applicationContext.SaveChanges();
         }
 
-        public List<Catalog> GetAllCatalogs() {
+        public List<CatalogDTO> GetAllCatalogs() {
             var entity = _applicationContext.Catalogs.ToList();
+            var result = entity.Select(x => new CatalogDTO
+            {
+                Id = x.Id,
+                Name = x.Name,
+                CreatedData = x.CreatedData,
+                ParentCatalog = x.ParentCatalog
+            }).ToList();
+            return result;
+        }
+
+        public CatalogDTO GetCatalogById(int id)
+        {
+            var entity = _applicationContext.Catalogs.SingleOrDefault(x => x.Id == id);
+            return new CatalogDTO
+            {
+                Id = entity.Id,
+                Name = entity.Name,
+                CreatedData = entity.CreatedData,
+                ParentCatalog = entity.ParentCatalog
+            };
+        }
+
+        List<CatalogDTO> ICatalogRepository.GetAllCatalogs()
+        {
+            var entity = _applicationContext.Catalogs.Select(x => new CatalogDTO
+            {
+                Id = x.Id,
+                Name = x.Name,
+                CreatedData = x.CreatedData,
+                ParentCatalog = x.ParentCatalog
+            }).ToList();
+
             return entity;
         }
     }
