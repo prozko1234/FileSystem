@@ -5,7 +5,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace IdeoTask.Models
+namespace IdeoTask.Services.Models
 {
     public class Catalog
     {
@@ -13,7 +13,7 @@ namespace IdeoTask.Models
         public int Id { get; set; }
         [Required]
         public string Name { get; set; }
-        [ForeignKey("Catalog")]
+        [ForeignKey("ParentId")]
         public virtual Catalog ParentCatalog { get; set; }
     }
 }

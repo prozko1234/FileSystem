@@ -2,7 +2,8 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using IdeoTask.Data;
+using IdeoTask.Services;
+using IdeoTask.Services.CatalogService;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.EntityFrameworkCore;
@@ -26,6 +27,7 @@ namespace IdeoTask
         {
             services.AddControllersWithViews();
 
+            services.AddScoped<ICatalogRepository, CatalogRepository>();
             services.AddDbContext<ApplicationContext>(options =>
                     options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
         }

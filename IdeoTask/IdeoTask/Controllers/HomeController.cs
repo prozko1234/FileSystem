@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using IdeoTask.Models;
+using IdeoTask.Services.CatalogService;
 
 namespace IdeoTask.Controllers
 {
@@ -16,6 +17,7 @@ namespace IdeoTask.Controllers
         public HomeController(ILogger<HomeController> logger)
         {
             _logger = logger;
+
         }
 
         public IActionResult Index()

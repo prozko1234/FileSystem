@@ -1,0 +1,8 @@
+D:\PROJECTS\Ideo\IdeoTask\IdeoTask.Services\obj\Debug\netstandard2.0\IdeoTask.Services.csprojAssemblyReference.cache
+D:\PROJECTS\Ideo\IdeoTask\IdeoTask.Services\obj\Debug\netstandard2.0\IdeoTask.Services.AssemblyInfoInputs.cache
+D:\PROJECTS\Ideo\IdeoTask\IdeoTask.Services\obj\Debug\netstandard2.0\IdeoTask.Services.AssemblyInfo.cs
+D:\PROJECTS\Ideo\IdeoTask\IdeoTask.Services\bin\Debug\netstandard2.0\IdeoTask.Services.deps.json
+D:\PROJECTS\Ideo\IdeoTask\IdeoTask.Services\bin\Debug\netstandard2.0\IdeoTask.Services.dll
+D:\PROJECTS\Ideo\IdeoTask\IdeoTask.Services\bin\Debug\netstandard2.0\IdeoTask.Services.pdb
+D:\PROJECTS\Ideo\IdeoTask\IdeoTask.Services\obj\Debug\netstandard2.0\IdeoTask.Services.dll
+D:\PROJECTS\Ideo\IdeoTask\IdeoTask.Services\obj\Debug\netstandard2.0\IdeoTask.Services.pdb
