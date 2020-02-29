@@ -1,4 +1,6 @@
-﻿using IdeoTask.Services.Models;
+﻿using IdeoTask;
+using IdeoTask.EntityFramework;
+using IdeoTask.Services.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;

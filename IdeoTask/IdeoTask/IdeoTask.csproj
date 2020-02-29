@@ -20,6 +20,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\IdeoTask.EntityFramework\IdeoTask.EntityFramework.csproj" />
     <ProjectReference Include="..\IdeoTask.Services\IdeoTask.Services.csproj" />
   </ItemGroup>
 

@@ -7,21 +7,26 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using IdeoTask.Models;
 using IdeoTask.Services.CatalogService;
+using IdeoTask.Services.Models;
 
 namespace IdeoTask.Controllers
 {
     public class HomeController : Controller
     {
-        private readonly ILogger<HomeController> _logger;
+        private readonly ICatalogRepository _catalogRepository;
 
-        public HomeController(ILogger<HomeController> logger)
+        public HomeController(ICatalogRepository catalogRepository)
         {
-            _logger = logger;
-
+            _catalogRepository = catalogRepository;
         }
 
         public IActionResult Index()
         {
+            _catalogRepository.AddCatalog(new Catalog
+            {
+                Name = "root",
+                ParentCatalog = null
+            });
             return View();
         }
 

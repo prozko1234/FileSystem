@@ -13,7 +13,12 @@ namespace IdeoTask.Services.Models
         public int Id { get; set; }
         [Required]
         public string Name { get; set; }
+        public DateTime? CreatedData {get; set;}
         [ForeignKey("ParentId")]
         public virtual Catalog ParentCatalog { get; set; }
+
+        public Catalog() {
+            CreatedData = DateTime.UtcNow;
+        }
     }
 }

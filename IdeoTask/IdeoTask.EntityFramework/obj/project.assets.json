@@ -1716,21 +1716,6 @@
         "runtime": {
           "lib/netstandard1.3/System.Xml.XmlSerializer.dll": {}
         }
-      },
-      "IdeoTask.EntityFramework/1.0.0": {
-        "type": "project",
-        "framework": ".NETStandard,Version=v2.0",
-        "dependencies": {
-          "Microsoft.EntityFrameworkCore": "3.1.2",
-          "Microsoft.EntityFrameworkCore.SqlServer": "3.1.2",
-          "Microsoft.Extensions.DependencyInjection": "3.1.2"
-        },
-        "compile": {
-          "bin/placeholder/IdeoTask.EntityFramework.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/IdeoTask.EntityFramework.dll": {}
-        }
       }
     }
   },
@@ -6171,16 +6156,10 @@
         "system.xml.xmlserializer.4.3.0.nupkg.sha512",
         "system.xml.xmlserializer.nuspec"
       ]
-    },
-    "IdeoTask.EntityFramework/1.0.0": {
-      "type": "project",
-      "path": "../IdeoTask.EntityFramework/IdeoTask.EntityFramework.csproj",
-      "msbuildProject": "../IdeoTask.EntityFramework/IdeoTask.EntityFramework.csproj"
     }
   },
   "projectFileDependencyGroups": {
     ".NETStandard,Version=v2.0": [
-      "IdeoTask.EntityFramework >= 1.0.0",
       "Microsoft.EntityFrameworkCore >= 3.1.2",
       "Microsoft.EntityFrameworkCore.Design >= 3.1.2",
       "Microsoft.EntityFrameworkCore.SqlServer >= 3.1.2",
@@ -6196,11 +6175,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\PROJECTS\\Ideo\\IdeoTask\\IdeoTask.Services\\IdeoTask.Services.csproj",
-      "projectName": "IdeoTask.Services",
-      "projectPath": "D:\\PROJECTS\\Ideo\\IdeoTask\\IdeoTask.Services\\IdeoTask.Services.csproj",
+      "projectUniqueName": "D:\\PROJECTS\\Ideo\\IdeoTask\\IdeoTask.EntityFramework\\IdeoTask.EntityFramework.csproj",
+      "projectName": "IdeoTask.EntityFramework",
+      "projectPath": "D:\\PROJECTS\\Ideo\\IdeoTask\\IdeoTask.EntityFramework\\IdeoTask.EntityFramework.csproj",
       "packagesPath": "C:\\Users\\Bogdan\\.nuget\\packages\\",
-      "outputPath": "D:\\PROJECTS\\Ideo\\IdeoTask\\IdeoTask.Services\\obj\\",
+      "outputPath": "D:\\PROJECTS\\Ideo\\IdeoTask\\IdeoTask.EntityFramework\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -6218,11 +6197,7 @@
       },
       "frameworks": {
         "netstandard2.0": {
-          "projectReferences": {
-            "D:\\PROJECTS\\Ideo\\IdeoTask\\IdeoTask.EntityFramework\\IdeoTask.EntityFramework.csproj": {
-              "projectPath": "D:\\PROJECTS\\Ideo\\IdeoTask\\IdeoTask.EntityFramework\\IdeoTask.EntityFramework.csproj"
-            }
-          }
+          "projectReferences": {}
         }
       },
       "warningProperties": {

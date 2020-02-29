@@ -6,3 +6,6 @@ D:\PROJECTS\Ideo\IdeoTask\IdeoTask.Services\bin\Debug\netstandard2.0\IdeoTask.Se
 D:\PROJECTS\Ideo\IdeoTask\IdeoTask.Services\bin\Debug\netstandard2.0\IdeoTask.Services.pdb
 D:\PROJECTS\Ideo\IdeoTask\IdeoTask.Services\obj\Debug\netstandard2.0\IdeoTask.Services.dll
 D:\PROJECTS\Ideo\IdeoTask\IdeoTask.Services\obj\Debug\netstandard2.0\IdeoTask.Services.pdb
+D:\PROJECTS\Ideo\IdeoTask\IdeoTask.Services\bin\Debug\netstandard2.0\IdeoTask.EntityFramework.dll
+D:\PROJECTS\Ideo\IdeoTask\IdeoTask.Services\bin\Debug\netstandard2.0\IdeoTask.EntityFramework.pdb
+D:\PROJECTS\Ideo\IdeoTask\IdeoTask.Services\obj\Debug\netstandard2.0\IdeoTask.Services.csproj.CopyComplete

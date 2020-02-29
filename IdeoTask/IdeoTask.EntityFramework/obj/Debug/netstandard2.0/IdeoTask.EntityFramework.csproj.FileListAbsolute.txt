@@ -1,0 +1,8 @@
+D:\PROJECTS\Ideo\IdeoTask\IdeoTask.EntityFramework\obj\Debug\netstandard2.0\IdeoTask.EntityFramework.csprojAssemblyReference.cache
+D:\PROJECTS\Ideo\IdeoTask\IdeoTask.EntityFramework\obj\Debug\netstandard2.0\IdeoTask.EntityFramework.AssemblyInfoInputs.cache
+D:\PROJECTS\Ideo\IdeoTask\IdeoTask.EntityFramework\obj\Debug\netstandard2.0\IdeoTask.EntityFramework.AssemblyInfo.cs
+D:\PROJECTS\Ideo\IdeoTask\IdeoTask.EntityFramework\bin\Debug\netstandard2.0\IdeoTask.EntityFramework.deps.json
+D:\PROJECTS\Ideo\IdeoTask\IdeoTask.EntityFramework\bin\Debug\netstandard2.0\IdeoTask.EntityFramework.dll
+D:\PROJECTS\Ideo\IdeoTask\IdeoTask.EntityFramework\bin\Debug\netstandard2.0\IdeoTask.EntityFramework.pdb
+D:\PROJECTS\Ideo\IdeoTask\IdeoTask.EntityFramework\obj\Debug\netstandard2.0\IdeoTask.EntityFramework.dll
+D:\PROJECTS\Ideo\IdeoTask\IdeoTask.EntityFramework\obj\Debug\netstandard2.0\IdeoTask.EntityFramework.pdb
