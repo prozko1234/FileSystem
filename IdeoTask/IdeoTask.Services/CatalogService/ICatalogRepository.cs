@@ -9,7 +9,7 @@ namespace IdeoTask.Services.CatalogService
 {
     public interface ICatalogRepository
     {
-        void AddCatalog(CatalogBranchDTO catalog);
+        void AddCatalog(Catalog catalog);
         void DeleteCatalog(int id);
         List<CatalogBranchDTO> GetAllCatalogs();
         CatalogBranchDTO GetCatalogById(int id);

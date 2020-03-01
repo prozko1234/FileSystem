@@ -3,21 +3,14 @@
 @{
     ViewData["Title"] = "My task";
 }
-
-    @foreach (var item in Model.BranchList) {
-    <ul>
-        <li>
-            @item.Name
-        </li>
-
-        @if (item.BranchChildren != null)
-        {
-            CatalogViewModel obj = new CatalogViewModel
-            {
-                BranchList = item.BranchChildren
-            };
-
-          <partial name="Index" model="obj" />
-        }
-    </ul>
-    }
+    <div class="mainContainer">
+        <div id="treeBlock" class="leftBlock">
+            <partial name="IndexPartialView" model="Model" />
+        </div>
+        <div id="funcBlock" class="rightBlock">
+            <a onclick="" class="btn-block" asp-action="Create" asp-controller="Home">Create</a>
+            <a class="btn-block" asp-action="Update" asp-controller="Home">Update</a>
+            <a class="btn-block" asp-action="Delete" asp-controller="Home">Delete</a>
+            <partial name="CreatePartialView" />
+        </div>
+    </div>

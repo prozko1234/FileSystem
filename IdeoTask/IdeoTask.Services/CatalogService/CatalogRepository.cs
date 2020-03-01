@@ -18,7 +18,7 @@ namespace IdeoTask.Services.CatalogService
             _applicationContext = applicationContext;
         }
 
-        public void AddCatalog(CatalogBranchDTO catalog) {
+        public void AddCatalog(Catalog catalog) {
             _applicationContext.Add(catalog);
             _applicationContext.SaveChanges();
         }

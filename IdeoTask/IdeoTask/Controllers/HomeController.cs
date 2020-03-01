@@ -20,6 +20,7 @@ namespace IdeoTask.Controllers
             _catalogRepository = catalogRepository;
         }
 
+        [HttpGet]
         public IActionResult Index()
         {
             var catalogs = _catalogRepository.GetBranches();
@@ -30,10 +31,11 @@ namespace IdeoTask.Controllers
             return View(result);
         }
 
-        [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
-        public IActionResult Error()
+        [HttpPost]
+        public IActionResult Create()
         {
-            return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
+
+            return View("CreatePartialView");
         }
     }
 }

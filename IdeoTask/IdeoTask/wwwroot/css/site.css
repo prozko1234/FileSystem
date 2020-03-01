@@ -69,3 +69,17 @@ body {
   white-space: nowrap;
   line-height: 60px; /* Vertically center the text there */
 }
+
+#treeBlock {
+    width: 50%;
+    float: left;
+    margin: 0;
+    padding: 0;
+}
+
+#funcBlock {
+    width: 50%;
+    float: right;
+    margin: 0;
+    padding: 0;
+}
