@@ -22,10 +22,10 @@ namespace IdeoTask.Controllers
 
         public IActionResult Index()
         {
-            var catalogs = _catalogRepository.GetAllCatalogs();
+            var catalogs = _catalogRepository.GetBranches();
             var result = new CatalogViewModel
             {
-                CatalogDTOs = catalogs
+                BranchList = catalogs
             };
             return View(result);
         }

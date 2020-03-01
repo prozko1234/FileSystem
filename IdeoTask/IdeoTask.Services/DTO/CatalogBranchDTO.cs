@@ -7,15 +7,12 @@ using System.Text;
 
 namespace IdeoTask.Services.DTO
 {
-    public class CatalogDTO
+    public class CatalogBranchDTO
     {
-        [Key]
         public int Id { get; set; }
-        [Required]
+        public int? ParentId { get; set; }
         public string Name { get; set; }
-        public DateTime? CreatedData { get; set; }
-        [ForeignKey("ParentId")]
-        public virtual Catalog ParentCatalog { get; set; }
-
+        public List<CatalogBranchDTO> BranchChildren { get; set; }
+        public DateTime? CreatedDate { get; set; }
     }
 }

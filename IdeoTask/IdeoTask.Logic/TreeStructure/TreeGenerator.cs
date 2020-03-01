@@ -6,7 +6,7 @@ using System.Text;
 
 namespace IdeoTask.Logic.TreeStructure
 {
-    public class TreeGenerator
+    public class TreeGenerator : ITreeGenerator
     {
         private readonly ICatalogRepository _catalogRepository;
 
@@ -14,9 +14,9 @@ namespace IdeoTask.Logic.TreeStructure
             _catalogRepository = catalogRepository;
         }
 
-        public List<CatalogDTO> GetTree() {
+        public List<CatalogBranchDTO> GetTreeS() {
             var treeList = _catalogRepository.GetAllCatalogs();
-
+            
 
 
             return null;

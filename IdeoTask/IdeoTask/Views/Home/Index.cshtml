@@ -5,8 +5,19 @@
 
     <div class="text-center">
         Hello world!
-        @foreach (var item in Model.CatalogDTOs)
+        @foreach (var item in Model.BranchList)
         {
-            <p>@item.Name   @item.CreatedData</p>
+        <ul>
+            <li>@item.Name</li>
+            @if(item.BranchChildren.Count > 0){ 
+                @foreach (var item2 in item.BranchChildren) {
+                <li>
+                    <ul>
+                        <li>@item2.Name</li>
+                    </ul>
+                </li>
+                }
+            }
+        </ul>
         }
     </div>

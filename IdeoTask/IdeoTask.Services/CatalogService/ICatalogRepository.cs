@@ -9,9 +9,12 @@ namespace IdeoTask.Services.CatalogService
 {
     public interface ICatalogRepository
     {
-        void AddCatalog(Catalog catalog);
+        void AddCatalog(CatalogBranchDTO catalog);
         void DeleteCatalog(int id);
-        List<CatalogDTO> GetAllCatalogs();
-        CatalogDTO GetCatalogById(int id);
+        List<CatalogBranchDTO> GetAllCatalogs();
+        CatalogBranchDTO GetCatalogById(int id);
+        List<CatalogBranchDTO> GetRootCatalogs();
+        List<CatalogBranchDTO> GetBranches();
+        List<CatalogBranchDTO> GetBrancheChildren(List<CatalogBranchDTO> branches, CatalogBranchDTO branchItem);
     }
 }

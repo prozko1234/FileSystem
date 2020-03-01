@@ -71,3 +71,5 @@ D:\PROJECTS\Ideo\IdeoTask\IdeoTask\bin\Debug\netcoreapp3.0\IdeoTask.Services.dll
 D:\PROJECTS\Ideo\IdeoTask\IdeoTask\bin\Debug\netcoreapp3.0\IdeoTask.Services.pdb
 D:\PROJECTS\Ideo\IdeoTask\IdeoTask\bin\Debug\netcoreapp3.0\IdeoTask.EntityFramework.dll
 D:\PROJECTS\Ideo\IdeoTask\IdeoTask\bin\Debug\netcoreapp3.0\IdeoTask.EntityFramework.pdb
+D:\PROJECTS\Ideo\IdeoTask\IdeoTask\bin\Debug\netcoreapp3.0\IdeoTask.Logic.dll
+D:\PROJECTS\Ideo\IdeoTask\IdeoTask\bin\Debug\netcoreapp3.0\IdeoTask.Logic.pdb
