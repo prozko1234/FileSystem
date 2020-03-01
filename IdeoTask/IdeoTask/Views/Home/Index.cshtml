@@ -1,23 +1,23 @@
 ﻿@model IdeoTask.Models.CatalogViewModel
+@namespace IdeoTask.Services.DTO
 @{
     ViewData["Title"] = "My task";
 }
 
-    <div class="text-center">
-        Hello world!
-        @foreach (var item in Model.BranchList)
+    @foreach (var item in Model.BranchList) {
+    <ul>
+        <li>
+            @item.Name
+        </li>
+
+        @if (item.BranchChildren != null)
         {
-        <ul>
-            <li>@item.Name</li>
-            @if(item.BranchChildren.Count > 0){ 
-                @foreach (var item2 in item.BranchChildren) {
-                <li>
-                    <ul>
-                        <li>@item2.Name</li>
-                    </ul>
-                </li>
-                }
-            }
-        </ul>
+            CatalogViewModel obj = new CatalogViewModel
+            {
+                BranchList = item.BranchChildren
+            };
+
+          <partial name="Index" model="obj" />
         }
-    </div>
+    </ul>
+    }

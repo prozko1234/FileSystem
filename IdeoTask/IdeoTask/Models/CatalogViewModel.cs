@@ -9,8 +9,6 @@ namespace IdeoTask.Models
 {
     public class CatalogViewModel
     {
-        public ICollection<CatalogBranchDTO> CatalogDTOsCollection { get; set; }
-        public List<CatalogBranchDTO> CatalogDTOsList { get; set; }
         public List<CatalogBranchDTO> BranchList { get; set; }
     }
 }
