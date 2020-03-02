@@ -1,28 +1,24 @@
-﻿
+﻿@model IdeoTask.Models.CatalogViewModel
 @{
     ViewData["Title"] = "Create";
+    Layout = null;
 }
-    <h1>@ViewData["Title"]</h1>
-
-    <form class="" action="/home/create" method="post">
-        <div class="form-group">
-            <label for="categoryName">Category name</label>
-            <input id="categoryName" class="form-control" type="text" name="Name" placeholder="Enter name" />
-            <small id="nameHelp" class="form-text text-muted">It's a catalog's name, it's only letters!</small>
-        </div>
-        <div class="form-group">
-            <div class="dropdown">
-                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Dropdown button
-                </button>
-                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                    <a class="dropdown-item" href="#">Action</a>
-                    <a class="dropdown-item" href="#">Another action</a>
-                    <a class="dropdown-item" href="#">Something else here</a>
-                </div>
-            </div>
-        </div>
-        <div class="form-group">
-            <input class="btn-dark" type="submit" name="submit" />
-        </div>
-    </form>
+<h1>@ViewData["Title"]</h1>
+<small>Creating category for @Model.SelectedCatalog.Name</small>
+<form class="" action="/Home/Create" method="post">
+    @*<div class="form-group">
+        <label for="categoryName">Category name</label>
+        <input id="categoryName" class="form-control" type="text" name="Name" placeholder="Enter name" />
+        <small id="nameHelp" class="form-text text-muted">It's a catalog's name, it's only letters!</small>
+    </div>*@
+    <div class="form-group">
+        <input asp-for="NewCatalog.Id" value="" type="hidden" />
+        <input asp-for="NewCatalog.ParentId" value="@Model.SelectedCatalog.Id" type="hidden" />
+        <label asp-for="NewCatalog.Name">Category name</label>
+        <input asp-for="NewCatalog.Name" class="form-control" placeholder="Enter name" />
+        <small id="nameHelp" class="form-text text-muted">It's a catalog's name, it's only letters!</small>
+    </div>
+    <div class="form-group">
+        <input class="btn-dark" type="submit" name="submit" value="Add" />
+    </div>
+</form>

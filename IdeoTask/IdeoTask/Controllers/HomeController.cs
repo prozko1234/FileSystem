@@ -23,19 +23,41 @@ namespace IdeoTask.Controllers
         [HttpGet]
         public IActionResult Index()
         {
-            var catalogs = _catalogRepository.GetBranches();
+            var categories = _catalogRepository.GetAllCatalogs();
+            var branches = _catalogRepository.GetBranches();
             var result = new CatalogViewModel
             {
-                BranchList = catalogs
+                BranchList = branches,
+                Catalogs = categories
             };
             return View(result);
         }
 
-        [HttpPost]
-        public IActionResult Create()
+        [HttpGet]
+        public ActionResult Create(int? Id)
         {
+            int id;
+            id = Id ?? default(int);
+            var parentCatalog = _catalogRepository.GetCatalogById(id);
+            var allCatalogs = _catalogRepository.GetAllCatalogs();
+            var result = new CatalogViewModel
+            {
+                Catalogs = allCatalogs,
+                SelectedCatalog = parentCatalog
+            };
+            return View("CreatePartialView", result);
+        }
 
-            return View("CreatePartialView");
+        [HttpPost]
+        public ActionResult Create(CatalogViewModel catalog)
+        {
+            _catalogRepository.AddCatalog(catalog.NewCatalog);
+            var branches = _catalogRepository.GetBranches();
+            var result = new CatalogViewModel
+            {
+                BranchList = branches
+            };
+            return View("Index", result);
         }
     }
 }

@@ -29,16 +29,10 @@ namespace IdeoTask.Services.CatalogService
             _applicationContext.SaveChanges();
         }
 
-        public CatalogBranchDTO GetCatalogById(int id)
+        public Catalog GetCatalogById(int id)
         {
             var entity = _applicationContext.Catalogs.SingleOrDefault(x => x.Id == id);
-            return new CatalogBranchDTO
-            {
-                Id = entity.Id,
-                Name = entity.Name,
-                CreatedDate = entity.CreatedData,
-                ParentId = entity.ParentCatalog.Id
-            };
+            return entity;
         }
 
         public List<CatalogBranchDTO> GetAllCatalogs()

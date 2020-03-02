@@ -12,7 +12,7 @@ namespace IdeoTask.Services.CatalogService
         void AddCatalog(Catalog catalog);
         void DeleteCatalog(int id);
         List<CatalogBranchDTO> GetAllCatalogs();
-        CatalogBranchDTO GetCatalogById(int id);
+        Catalog GetCatalogById(int id);
         List<CatalogBranchDTO> GetRootCatalogs();
         List<CatalogBranchDTO> GetBranches();
         List<CatalogBranchDTO> GetBrancheChildren(List<CatalogBranchDTO> branches, CatalogBranchDTO branchItem);
