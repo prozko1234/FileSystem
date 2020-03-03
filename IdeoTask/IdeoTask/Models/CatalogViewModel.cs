@@ -1,4 +1,4 @@
-﻿using IdeoTask.Services.DTO;
+﻿using IdeoTask.Services.Model;
 using IdeoTask.Services.Models;
 using System;
 using System.Collections.Generic;
@@ -9,9 +9,10 @@ namespace IdeoTask.Models
 {
     public class CatalogViewModel
     {
-        public List<CatalogBranchDTO> BranchList { get; set; }
-        public List<CatalogBranchDTO> Catalogs { get; set; }
+        public List<Branch> BranchList { get; set; }
+        public List<Catalog> Catalogs { get; set; }
         public Catalog SelectedCatalog { get; set; }
         public Catalog NewCatalog { get; set; }
+        public string ModalWindowMessage { get; set; }
     }
 }

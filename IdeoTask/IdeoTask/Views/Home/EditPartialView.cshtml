@@ -1,0 +1,34 @@
+﻿@model IdeoTask.Models.CatalogViewModel
+@{
+    ViewData["Title"] = "Update";
+    Layout = null;
+}
+<h1>@ViewData["Title"]</h1>
+<small>Editing data for @Model.SelectedCatalog.Name</small>
+<form class="" action="/Home/Edit" method="post">
+    <div class="form-group">
+        <input type="hidden" asp-for="SelectedCatalog.Id" />
+        <input type="hidden" asp-for="SelectedCatalog.ParentId" />
+        <input type="hidden" asp-for="SelectedCatalog.CreatedDate" />
+        <label asp-for="SelectedCatalog.Name">Category name</label>
+        <input asp-for="SelectedCatalog.Name" class="form-control" placeholder="Enter name" value="@Model.SelectedCatalog.Name" />
+        <small id="nameHelp" class="form-text text-muted">It's a catalog's name, it's only letters!</small>
+    </div>
+    <div class="form-group">
+        <select asp-for="NewCatalog.IsLeaf">
+            @if (Model.SelectedCatalog.IsLeaf)
+            {
+                <option value="true" selected>Leaf</option>
+                <option value="false">Branch</option>
+            }
+            else
+            {
+                <option value="true">Leaf</option>
+                <option value="false" selected>Branch</option>
+            }
+        </select>
+    </div>
+    <div class="form-group">
+        <input class="btn-dark" type="submit" name="submit" value="Edit" />
+    </div>
+</form>

@@ -9,18 +9,18 @@ namespace IdeoTask.Services.Models
 {
     public class Catalog
     {
-        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         [Key]
         public int Id { get; set; }
         [Required]
         public string Name { get; set; }
-        public DateTime? CreatedData {get; set;}
+        public DateTime? CreatedDate {get; set;}
         public int? ParentId { get; set; }
+        public bool IsLeaf { get; set; }
 
         [ForeignKey("ParentId ")]
         public Catalog ParentCatalog { get; set; }
         public Catalog() {
-            CreatedData = DateTime.UtcNow;
+            CreatedDate = DateTime.UtcNow;
         }
     }
 }

@@ -34,15 +34,11 @@ namespace IdeoTask.Controllers
         }
 
         [HttpGet]
-        public ActionResult Create(int? Id)
+        public ActionResult Create(int Id)
         {
-            int id;
-            id = Id ?? default(int);
-            var parentCatalog = _catalogRepository.GetCatalogById(id);
-            var allCatalogs = _catalogRepository.GetAllCatalogs();
+            var parentCatalog = _catalogRepository.GetCatalogById(Id);
             var result = new CatalogViewModel
             {
-                Catalogs = allCatalogs,
                 SelectedCatalog = parentCatalog
             };
             return View("CreatePartialView", result);
@@ -58,6 +54,47 @@ namespace IdeoTask.Controllers
                 BranchList = branches
             };
             return View("Index", result);
+        }
+
+        [HttpGet]
+        public ActionResult Edit(int Id)
+        {
+            var selectedCatalog = _catalogRepository.GetCatalogById(Id);
+            var result = new CatalogViewModel
+            {
+                SelectedCatalog = selectedCatalog
+            };
+            return View("EditPartialView", result);
+        }
+        
+        [HttpPost]
+        public ActionResult Edit(CatalogViewModel catalog)
+        {
+            _catalogRepository.UpdateCatalog(catalog.SelectedCatalog);
+            var branches = _catalogRepository.GetBranches();
+            var result = new CatalogViewModel
+            {
+                BranchList = branches
+            };
+            return View("Index", result);
+        }
+
+        [HttpGet]
+        public ActionResult Delete(int Id)
+        {
+            var selectedCatalog = _catalogRepository.GetCatalogById(Id);
+            var result = new CatalogViewModel
+            {
+                SelectedCatalog = selectedCatalog
+            };
+            return View("DeletePartialView", result);
+        }
+
+        [HttpPost]
+        public ActionResult Delete(CatalogViewModel catalog)
+        {
+            _catalogRepository.DeleteCatalog(catalog.SelectedCatalog.Id);
+            return RedirectToAction (nameof(Index));
         }
     }
 }

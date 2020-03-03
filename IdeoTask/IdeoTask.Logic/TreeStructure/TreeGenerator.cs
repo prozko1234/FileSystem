@@ -1,5 +1,5 @@
 ﻿using IdeoTask.Services.CatalogService;
-using IdeoTask.Services.DTO;
+using IdeoTask.Services.Model;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -14,11 +14,8 @@ namespace IdeoTask.Logic.TreeStructure
             _catalogRepository = catalogRepository;
         }
 
-        public List<CatalogBranchDTO> GetTreeS() {
+        public List<Branch> GetTrees() {
             var treeList = _catalogRepository.GetAllCatalogs();
-            
-
-
             return null;
         }
 

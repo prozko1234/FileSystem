@@ -1,6 +1,6 @@
 ﻿using IdeoTask;
 using IdeoTask.EntityFramework;
-using IdeoTask.Services.DTO;
+using IdeoTask.Services.Model;
 using IdeoTask.Services.Models;
 using System;
 using System.Collections.Generic;
@@ -16,6 +16,12 @@ namespace IdeoTask.Services.CatalogService
 
         public CatalogRepository(ApplicationContext applicationContext) {
             _applicationContext = applicationContext;
+        }
+
+        public void UpdateCatalog(Catalog catalog)
+        {
+            _applicationContext.Update(catalog);
+            _applicationContext.SaveChanges();
         }
 
         public void AddCatalog(Catalog catalog) {
@@ -35,51 +41,47 @@ namespace IdeoTask.Services.CatalogService
             return entity;
         }
 
-        public List<CatalogBranchDTO> GetAllCatalogs()
+        public List<Catalog> GetAllCatalogs()
         {
-            var entity = _applicationContext.Catalogs.Select(x => new CatalogBranchDTO
-            {
-                Id = x.Id,
-                Name = x.Name,
-                CreatedDate = x.CreatedData,
-                ParentId = x.ParentCatalog.Id
-            }).ToList();
+            var entity = _applicationContext.Catalogs.ToList();
 
             return entity;
         }
 
-        public List<CatalogBranchDTO> GetRootCatalogs() {
+        public List<Branch> GetRootCatalogs() {
             var entity = _applicationContext.Catalogs.Where(x => x.ParentCatalog == null).ToList();
-            var result = entity.Select(x => new CatalogBranchDTO
+            var result = entity.Select(x => new Branch
             {
                 Id = x.Id,
                 Name = x.Name,
-                CreatedDate = x.CreatedData,
-                ParentId = x.ParentCatalog.Id
+                CreatedDate = x.CreatedDate,
+                ParentId = x.ParentId,
+                IsLeaf = x.IsLeaf
             }).ToList();
 
             return result;
         }
 
-        public List<CatalogBranchDTO> GetBranches()
+        public List<Branch> GetBranches()
         {
-            List<CatalogBranchDTO> branches = GetAllCatalogs().Select(x => new CatalogBranchDTO
+            List<Branch> branches = GetAllCatalogs().Select(x => new Branch
             {
                 Id = x.Id,
                 Name = x.Name,
                 ParentId = x.ParentId,
                 CreatedDate = x.CreatedDate,
+                IsLeaf = x.IsLeaf,
                 BranchChildren = null
             }).ToList();
 
             foreach (var item in branches) {
-                item.BranchChildren = GetBrancheChildren(branches, item);
+                item.BranchChildren = GetChildrenBranches(branches, item);
             }
 
             return branches.Where(x => x.ParentId == null).ToList();
         }
 
-        public List<CatalogBranchDTO> GetBrancheChildren(List<CatalogBranchDTO> branches, CatalogBranchDTO branchItem) {
+        public List<Branch> GetChildrenBranches(List<Branch> branches, Branch branchItem) {
             
             if (branches.All(x => x.ParentId != branchItem.Id)) return null;
 
@@ -89,7 +91,7 @@ namespace IdeoTask.Services.CatalogService
 
             foreach (var item in branchItem.BranchChildren)
             {
-                item.BranchChildren = GetBrancheChildren(branches, item);
+                item.BranchChildren = GetChildrenBranches(branches, item);
             }
 
             return branchItem.BranchChildren;

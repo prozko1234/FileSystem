@@ -146,6 +146,8 @@ D:\PROJECTS\Ideo\IdeoTask\IdeoTask\bin\Debug\netcoreapp3.0\tr\Microsoft.CodeAnal
 D:\PROJECTS\Ideo\IdeoTask\IdeoTask\bin\Debug\netcoreapp3.0\zh-Hans\Microsoft.CodeAnalysis.Workspaces.resources.dll
 D:\PROJECTS\Ideo\IdeoTask\IdeoTask\bin\Debug\netcoreapp3.0\zh-Hant\Microsoft.CodeAnalysis.Workspaces.resources.dll
 D:\PROJECTS\Ideo\IdeoTask\IdeoTask\obj\Debug\netcoreapp3.0\IdeoTask.MvcApplicationPartsAssemblyInfo.cache
-D:\PROJECTS\Ideo\IdeoTask\IdeoTask\obj\Debug\netcoreapp3.0\Razor\Views\Home\Create.cshtml.g.cs
 D:\PROJECTS\Ideo\IdeoTask\IdeoTask\obj\Debug\netcoreapp3.0\Razor\Views\Home\IndexPartialView.cshtml.g.cs
 D:\PROJECTS\Ideo\IdeoTask\IdeoTask\obj\Debug\netcoreapp3.0\Razor\Views\Home\CreatePartialView.cshtml.g.cs
+D:\PROJECTS\Ideo\IdeoTask\IdeoTask\obj\Debug\netcoreapp3.0\Razor\Views\Home\EditPartialView.cshtml.g.cs
+D:\PROJECTS\Ideo\IdeoTask\IdeoTask\obj\Debug\netcoreapp3.0\Razor\Views\Home\Error.cshtml.g.cs
+D:\PROJECTS\Ideo\IdeoTask\IdeoTask\obj\Debug\netcoreapp3.0\Razor\Views\Home\DeletePartialView.cshtml.g.cs

@@ -1,4 +1,4 @@
-﻿using IdeoTask.Services.DTO;
+﻿using IdeoTask.Services.Model;
 using IdeoTask.Services.Models;
 using System;
 using System.Collections.Generic;
@@ -11,10 +11,11 @@ namespace IdeoTask.Services.CatalogService
     {
         void AddCatalog(Catalog catalog);
         void DeleteCatalog(int id);
-        List<CatalogBranchDTO> GetAllCatalogs();
+        void UpdateCatalog(Catalog catalog);
+        List<Catalog> GetAllCatalogs();
         Catalog GetCatalogById(int id);
-        List<CatalogBranchDTO> GetRootCatalogs();
-        List<CatalogBranchDTO> GetBranches();
-        List<CatalogBranchDTO> GetBrancheChildren(List<CatalogBranchDTO> branches, CatalogBranchDTO branchItem);
+        List<Branch> GetRootCatalogs();
+        List<Branch> GetBranches();
+        List<Branch> GetChildrenBranches(List<Branch> branches, Branch branchItem);
     }
 }

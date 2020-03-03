@@ -14,8 +14,9 @@ namespace IdeoTask.EntityFramework.Migrations
                     Id = table.Column<int>(nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     Name = table.Column<string>(nullable: false),
-                    CreatedData = table.Column<DateTime>(nullable: true),
-                    ParentId = table.Column<int>(nullable: true)
+                    CreatedDate = table.Column<DateTime>(nullable: true),
+                    ParentId = table.Column<int>(nullable: true),
+                    IsLeaf = table.Column<bool>(nullable: false)
                 },
                 constraints: table =>
                 {

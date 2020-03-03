@@ -83,3 +83,16 @@ body {
     margin: 0;
     padding: 0;
 }
+
+.treeElementIcon {
+    -moz-transition: all 0.7s linear;
+    -webkit-transition: all 0.7s linear;
+    transition: all 0.7s linear;
+}
+
+.treeElementIcon.down {
+    -ms-transform: rotate(-90deg);
+    -moz-transform: rotate(-90deg);
+    -webkit-transform: rotate(-90deg);
+    transform: rotate(-90deg);
+}

@@ -10,7 +10,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace IdeoTask.EntityFramework.Migrations
 {
     [DbContext(typeof(ApplicationContext))]
-    [Migration("20200302205807_Init")]
+    [Migration("20200303200406_Init")]
     partial class Init
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -28,8 +28,11 @@ namespace IdeoTask.EntityFramework.Migrations
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<DateTime?>("CreatedData")
+                    b.Property<DateTime?>("CreatedDate")
                         .HasColumnType("datetime2");
+
+                    b.Property<bool>("IsLeaf")
+                        .HasColumnType("bit");
 
                     b.Property<string>("Name")
                         .IsRequired()

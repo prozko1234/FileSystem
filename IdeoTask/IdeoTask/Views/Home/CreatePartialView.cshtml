@@ -6,17 +6,18 @@
 <h1>@ViewData["Title"]</h1>
 <small>Creating category for @Model.SelectedCatalog.Name</small>
 <form class="" action="/Home/Create" method="post">
-    @*<div class="form-group">
-        <label for="categoryName">Category name</label>
-        <input id="categoryName" class="form-control" type="text" name="Name" placeholder="Enter name" />
-        <small id="nameHelp" class="form-text text-muted">It's a catalog's name, it's only letters!</small>
-    </div>*@
     <div class="form-group">
         <input asp-for="NewCatalog.Id" value="" type="hidden" />
         <input asp-for="NewCatalog.ParentId" value="@Model.SelectedCatalog.Id" type="hidden" />
         <label asp-for="NewCatalog.Name">Category name</label>
         <input asp-for="NewCatalog.Name" class="form-control" placeholder="Enter name" />
         <small id="nameHelp" class="form-text text-muted">It's a catalog's name, it's only letters!</small>
+    </div>
+    <div class="form-group">
+        <select asp-for="NewCatalog.IsLeaf" >
+            <option value="true">Leaf</option>
+            <option value="false" selected>Branch</option>
+        </select>
     </div>
     <div class="form-group">
         <input class="btn-dark" type="submit" name="submit" value="Add" />

@@ -1,0 +1,14 @@
+﻿@model IdeoTask.Models.CatalogViewModel
+@{
+    ViewData["Title"] = "Delete";
+    Layout = null;
+}
+<h1>@ViewData["Title"]</h1>
+<div>
+    <p>Are you sure you want to delete @Model.SelectedCatalog.Name ?</p>
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="SelectedCatalog.Id"/>
+        <input class="btn btn-primary" type="submit" value="Delete" />
+        <a asp-action="Index" class="btn btn-secondary" data-dismiss="modal">Close</a>
+    </form>
+</div>

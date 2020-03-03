@@ -23,7 +23,8 @@ namespace IdeoTask.EntityFramework.Models
                     new Catalog
                     {
                         Name = "Root",
-                        ParentCatalog = null
+                        ParentCatalog = null,
+                        IsLeaf = false
                     }
                 );
                 context.SaveChanges();

@@ -26,8 +26,11 @@ namespace IdeoTask.EntityFramework.Migrations
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<DateTime?>("CreatedData")
+                    b.Property<DateTime?>("CreatedDate")
                         .HasColumnType("datetime2");
+
+                    b.Property<bool>("IsLeaf")
+                        .HasColumnType("bit");
 
                     b.Property<string>("Name")
                         .IsRequired()
