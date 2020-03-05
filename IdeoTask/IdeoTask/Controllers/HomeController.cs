@@ -27,13 +27,14 @@ namespace IdeoTask.Controllers
             try
             {
                 var categories = _catalogRepository.GetAllCatalogs();
-                var branches = _catalogRepository.GetBranches(SortType.NameAsc);
+                List<Branch> branches;
                 if (sort == "NameAsc")
                     branches = _catalogRepository.GetBranches(SortType.NameAsc);
                 else if (sort == "NameDesc")
                     branches = _catalogRepository.GetBranches(SortType.NameDesc);
                 else if (sort == "DateAsc")
                     branches = _catalogRepository.GetBranches(SortType.DateAsc);
+                else branches = _catalogRepository.GetBranches(SortType.NameAsc);
                 var result = new CatalogViewModel
                 {
                     BranchList = branches,

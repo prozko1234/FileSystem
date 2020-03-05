@@ -14,10 +14,10 @@ namespace IdeoTask.Services.CatalogService
         void UpdateCatalog(Catalog catalog);
         List<Catalog> GetAllCatalogs();
         Catalog GetCatalogById(int id);
-        List<Branch> GetRootCatalogs();
+        List<Branch> GetRootBranches();
         List<Branch> GetBranches(SortType sortType);
         List<Branch> GetChildrenBranches(List<Branch> branches, Branch branchItem);
-        List<Branch> SortTree(SortType sortType, List<Branch> branches);
+        List<Branch> GetSortTree(SortType sortType, List<Branch> branches);
         void ChangeBranchLocation(Catalog catalog, int idLocation);
     }
 }

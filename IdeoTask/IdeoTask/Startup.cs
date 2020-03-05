@@ -26,7 +26,7 @@ namespace IdeoTask
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllersWithViews();
-            // Dependency inhections
+            // Dependency injections
             services.AddScoped<ICatalogRepository, CatalogRepository>();
             //
             // Database connection
