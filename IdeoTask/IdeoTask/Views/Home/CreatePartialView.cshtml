@@ -10,8 +10,8 @@
         <input asp-for="NewCatalog.Id" value="" type="hidden" />
         <input asp-for="NewCatalog.ParentId" value="@Model.SelectedCatalog.Id" type="hidden" />
         <label asp-for="NewCatalog.Name">Category name</label>
-        <input asp-for="NewCatalog.Name" class="form-control" placeholder="Enter name" />
-        <small id="nameHelp" class="form-text text-muted">It's a catalog's name, it's only letters!</small>
+        <input id="nameInput" required asp-for="NewCatalog.Name" class="form-control" placeholder="Enter name" />
+        <smal class="form-text text-muted nameHelp"></smal>
     </div>
     <div class="form-group">
         <select asp-for="NewCatalog.IsLeaf" >

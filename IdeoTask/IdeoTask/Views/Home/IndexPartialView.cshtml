@@ -3,8 +3,8 @@
 
 @foreach (var item in Model.BranchList)
 {
-    <ul class="treeElement">
-        <li class="treeElementChild">
+    <ul data-id="@item.Id" class="treeElement">
+        <li data-id="@item.Id" class="treeElementChild">
             @item.Name
             @if (item.IsLeaf == false)
             {

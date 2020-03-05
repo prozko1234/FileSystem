@@ -31,8 +31,21 @@ namespace IdeoTask.Services.CatalogService
 
         public void DeleteCatalog(int id) {
             var entity = _applicationContext.Catalogs.SingleOrDefault(x => id == x.Id);
+            if (GetAllCatalogs().All(x => x.ParentId == id))
+                DeleteChildCatalogs(id);
+
             _applicationContext.Remove(entity);
             _applicationContext.SaveChanges();
+        }
+
+        public void DeleteChildCatalogs(int id) { 
+            var catalogs = GetAllCatalogs().Where(x => x.ParentId == id).ToList();
+            if (catalogs == null)
+                return;
+            foreach (var catalog in catalogs)
+            {
+                DeleteCatalog(catalog.Id);
+            }
         }
 
         public Catalog GetCatalogById(int id)
@@ -112,18 +125,11 @@ namespace IdeoTask.Services.CatalogService
             return branches;
         }
 
-        public void ChangeBranchLocation(Branch branch, int idLocation)
+        public void ChangeBranchLocation(Catalog catalog, int idLocation)
         {
-            if (branch == null)
+            if (catalog == null)
                 return;
-            var catalog = new Catalog
-            {
-                Id = branch.Id,
-                ParentId = branch.ParentId,
-                Name = branch.Name,
-                CreatedDate = branch.CreatedDate
-            };
-            branch.ParentId = idLocation;
+            catalog.ParentId = idLocation;
             _applicationContext.Update(catalog);
             _applicationContext.SaveChanges();
         }

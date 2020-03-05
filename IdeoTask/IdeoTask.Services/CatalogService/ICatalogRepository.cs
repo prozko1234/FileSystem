@@ -18,5 +18,6 @@ namespace IdeoTask.Services.CatalogService
         List<Branch> GetBranches(SortType sortType);
         List<Branch> GetChildrenBranches(List<Branch> branches, Branch branchItem);
         List<Branch> SortTree(SortType sortType, List<Branch> branches);
+        void ChangeBranchLocation(Catalog catalog, int idLocation);
     }
 }

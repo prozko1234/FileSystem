@@ -84,10 +84,25 @@ body {
     padding: 0;
 }
 
+ul {
+    list-style: none;
+}
+
 .treeElementIcon {
     -moz-transition: all 0.7s linear;
     -webkit-transition: all 0.7s linear;
     transition: all 0.7s linear;
+}
+
+.treeElementChild {
+    display: block;
+    width: 200px;
+    height: 30px;
+    background-color: #ccc;
+    margin-top: 5px;
+    -webkit-box-shadow: 10px 10px 27px 0px rgba(0,0,0,0.54);
+    -moz-box-shadow: 10px 10px 27px 0px rgba(0,0,0,0.54);
+    box-shadow: 10px 10px 27px 0px rgba(0,0,0,0.54);
 }
 
 .treeElementIcon.down {
@@ -95,4 +110,12 @@ body {
     -moz-transform: rotate(-90deg);
     -webkit-transform: rotate(-90deg);
     transform: rotate(-90deg);
+}
+
+.mainContainer {
+    overflow: hidden;
+}
+
+.nameHelp, .nameEditHelp {
+    display: none;
 }

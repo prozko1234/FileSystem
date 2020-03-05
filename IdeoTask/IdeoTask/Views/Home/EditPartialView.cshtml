@@ -11,8 +11,8 @@
         <input type="hidden" asp-for="SelectedCatalog.ParentId" />
         <input type="hidden" asp-for="SelectedCatalog.CreatedDate" />
         <label asp-for="SelectedCatalog.Name">Category name</label>
-        <input asp-for="SelectedCatalog.Name" class="form-control" placeholder="Enter name" value="@Model.SelectedCatalog.Name" />
-        <small id="nameHelp" class="form-text text-muted">It's a catalog's name, it's only letters!</small>
+        <input required id="nameEditInput" asp-for="SelectedCatalog.Name" class="form-control" placeholder="Enter name" value="@Model.SelectedCatalog.Name" />
+        <small class="form-text text-muted nameEditHelp">It's a catalog's name, it's only letters!</small>
     </div>
     <div class="form-group">
         <select asp-for="NewCatalog.IsLeaf">
