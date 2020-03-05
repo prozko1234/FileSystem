@@ -111,5 +111,21 @@ namespace IdeoTask.Services.CatalogService
                 return branches.OrderByDescending(x => x.CreatedDate).ToList();
             return branches;
         }
+
+        public void ChangeBranchLocation(Branch branch, int idLocation)
+        {
+            if (branch == null)
+                return;
+            var catalog = new Catalog
+            {
+                Id = branch.Id,
+                ParentId = branch.ParentId,
+                Name = branch.Name,
+                CreatedDate = branch.CreatedDate
+            };
+            branch.ParentId = idLocation;
+            _applicationContext.Update(catalog);
+            _applicationContext.SaveChanges();
+        }
     }
 }

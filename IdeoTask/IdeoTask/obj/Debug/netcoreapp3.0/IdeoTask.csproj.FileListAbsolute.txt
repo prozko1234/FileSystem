@@ -149,4 +149,3 @@ D:\PROJECTS\Ideo\IdeoTask\IdeoTask\obj\Debug\netcoreapp3.0\Razor\Views\Home\Crea
 D:\PROJECTS\Ideo\IdeoTask\IdeoTask\obj\Debug\netcoreapp3.0\Razor\Views\Home\EditPartialView.cshtml.g.cs
 D:\PROJECTS\Ideo\IdeoTask\IdeoTask\obj\Debug\netcoreapp3.0\Razor\Views\Home\Error.cshtml.g.cs
 D:\PROJECTS\Ideo\IdeoTask\IdeoTask\obj\Debug\netcoreapp3.0\Razor\Views\Home\DeletePartialView.cshtml.g.cs
-D:\PROJECTS\Ideo\IdeoTask\IdeoTask\obj\Debug\netcoreapp3.0\Razor\Views\Home\IndexStartPartialView.cshtml.g.cs
