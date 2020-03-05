@@ -70,8 +70,6 @@ D:\PROJECTS\Ideo\IdeoTask\IdeoTask\bin\Debug\netcoreapp3.0\IdeoTask.Services.dll
 D:\PROJECTS\Ideo\IdeoTask\IdeoTask\bin\Debug\netcoreapp3.0\IdeoTask.Services.pdb
 D:\PROJECTS\Ideo\IdeoTask\IdeoTask\bin\Debug\netcoreapp3.0\IdeoTask.EntityFramework.dll
 D:\PROJECTS\Ideo\IdeoTask\IdeoTask\bin\Debug\netcoreapp3.0\IdeoTask.EntityFramework.pdb
-D:\PROJECTS\Ideo\IdeoTask\IdeoTask\bin\Debug\netcoreapp3.0\IdeoTask.Logic.dll
-D:\PROJECTS\Ideo\IdeoTask\IdeoTask\bin\Debug\netcoreapp3.0\IdeoTask.Logic.pdb
 D:\PROJECTS\Ideo\IdeoTask\IdeoTask\bin\Debug\netcoreapp3.0\Microsoft.AspNetCore.Razor.Language.dll
 D:\PROJECTS\Ideo\IdeoTask\IdeoTask\bin\Debug\netcoreapp3.0\Microsoft.CodeAnalysis.dll
 D:\PROJECTS\Ideo\IdeoTask\IdeoTask\bin\Debug\netcoreapp3.0\Microsoft.CodeAnalysis.CSharp.dll
@@ -151,3 +149,4 @@ D:\PROJECTS\Ideo\IdeoTask\IdeoTask\obj\Debug\netcoreapp3.0\Razor\Views\Home\Crea
 D:\PROJECTS\Ideo\IdeoTask\IdeoTask\obj\Debug\netcoreapp3.0\Razor\Views\Home\EditPartialView.cshtml.g.cs
 D:\PROJECTS\Ideo\IdeoTask\IdeoTask\obj\Debug\netcoreapp3.0\Razor\Views\Home\Error.cshtml.g.cs
 D:\PROJECTS\Ideo\IdeoTask\IdeoTask\obj\Debug\netcoreapp3.0\Razor\Views\Home\DeletePartialView.cshtml.g.cs
+D:\PROJECTS\Ideo\IdeoTask\IdeoTask\obj\Debug\netcoreapp3.0\Razor\Views\Home\IndexStartPartialView.cshtml.g.cs

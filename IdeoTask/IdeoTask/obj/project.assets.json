@@ -1922,19 +1922,6 @@
           "bin/placeholder/IdeoTask.EntityFramework.dll": {}
         }
       },
-      "IdeoTask.Logic/1.0.0": {
-        "type": "project",
-        "framework": ".NETStandard,Version=v2.0",
-        "dependencies": {
-          "IdeoTask.Services": "1.0.0"
-        },
-        "compile": {
-          "bin/placeholder/IdeoTask.Logic.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/IdeoTask.Logic.dll": {}
-        }
-      },
       "IdeoTask.Services/1.0.0": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
@@ -6724,11 +6711,6 @@
       "path": "../IdeoTask.EntityFramework/IdeoTask.EntityFramework.csproj",
       "msbuildProject": "../IdeoTask.EntityFramework/IdeoTask.EntityFramework.csproj"
     },
-    "IdeoTask.Logic/1.0.0": {
-      "type": "project",
-      "path": "../IdeoTask.Logic/IdeoTask.Logic.csproj",
-      "msbuildProject": "../IdeoTask.Logic/IdeoTask.Logic.csproj"
-    },
     "IdeoTask.Services/1.0.0": {
       "type": "project",
       "path": "../IdeoTask.Services/IdeoTask.Services.csproj",
@@ -6738,7 +6720,6 @@
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v3.0": [
       "IdeoTask.EntityFramework >= 1.0.0",
-      "IdeoTask.Logic >= 1.0.0",
       "IdeoTask.Services >= 1.0.0",
       "Microsoft.EntityFrameworkCore >= 3.1.2",
       "Microsoft.EntityFrameworkCore.Design >= 3.1.2",
@@ -6782,9 +6763,6 @@
           "projectReferences": {
             "D:\\PROJECTS\\Ideo\\IdeoTask\\IdeoTask.EntityFramework\\IdeoTask.EntityFramework.csproj": {
               "projectPath": "D:\\PROJECTS\\Ideo\\IdeoTask\\IdeoTask.EntityFramework\\IdeoTask.EntityFramework.csproj"
-            },
-            "D:\\PROJECTS\\Ideo\\IdeoTask\\IdeoTask.Logic\\IdeoTask.Logic.csproj": {
-              "projectPath": "D:\\PROJECTS\\Ideo\\IdeoTask\\IdeoTask.Logic\\IdeoTask.Logic.csproj"
             },
             "D:\\PROJECTS\\Ideo\\IdeoTask\\IdeoTask.Services\\IdeoTask.Services.csproj": {
               "projectPath": "D:\\PROJECTS\\Ideo\\IdeoTask\\IdeoTask.Services\\IdeoTask.Services.csproj"

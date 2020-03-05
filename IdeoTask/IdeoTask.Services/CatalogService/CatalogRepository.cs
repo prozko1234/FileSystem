@@ -62,7 +62,7 @@ namespace IdeoTask.Services.CatalogService
             return result;
         }
 
-        public List<Branch> GetBranches()
+        public List<Branch> GetBranches(SortType sortType)
         {
             List<Branch> branches = GetAllCatalogs().Select(x => new Branch
             {
@@ -76,9 +76,11 @@ namespace IdeoTask.Services.CatalogService
 
             foreach (var item in branches) {
                 item.BranchChildren = GetChildrenBranches(branches, item);
+                if (item.BranchChildren != null)
+                    item.BranchChildren = SortTree(sortType, item.BranchChildren);
             }
 
-            return branches.Where(x => x.ParentId == null).ToList();
+            return branches.Where(x=> x.ParentId == null).ToList();
         }
 
         public List<Branch> GetChildrenBranches(List<Branch> branches, Branch branchItem) {
@@ -95,6 +97,19 @@ namespace IdeoTask.Services.CatalogService
             }
 
             return branchItem.BranchChildren;
+        }
+
+        public List<Branch> SortTree(SortType sortType, List<Branch> branches)
+        {
+            if (sortType == SortType.NameAsc)
+                return branches.OrderBy(x => x.Name).ToList();
+            else if (sortType == SortType.NameDesc)
+                return branches.OrderByDescending(x => x.Name).ToList();
+            else if (sortType == SortType.DateAsc)
+                return branches.OrderBy(x => x.CreatedDate).ToList();
+            else if (sortType == SortType.DateDesc)
+                return branches.OrderByDescending(x => x.CreatedDate).ToList();
+            return branches;
         }
     }
 }

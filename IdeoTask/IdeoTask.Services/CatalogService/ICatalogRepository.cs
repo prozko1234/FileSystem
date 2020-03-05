@@ -15,7 +15,8 @@ namespace IdeoTask.Services.CatalogService
         List<Catalog> GetAllCatalogs();
         Catalog GetCatalogById(int id);
         List<Branch> GetRootCatalogs();
-        List<Branch> GetBranches();
+        List<Branch> GetBranches(SortType sortType);
         List<Branch> GetChildrenBranches(List<Branch> branches, Branch branchItem);
+        List<Branch> SortTree(SortType sortType, List<Branch> branches);
     }
 }

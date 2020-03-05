@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using IdeoTask.EntityFramework;
-using IdeoTask.Logic.TreeStructure;
 using IdeoTask.Services.CatalogService;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -29,7 +28,6 @@ namespace IdeoTask
             services.AddControllersWithViews();
             // Dependency inhections
             services.AddScoped<ICatalogRepository, CatalogRepository>();
-            services.AddScoped<ITreeGenerator, TreeGenerator>();
             //
             // Database connection
             services.AddDbContext<ApplicationContext>(options =>

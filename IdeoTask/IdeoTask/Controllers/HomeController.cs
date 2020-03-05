@@ -8,6 +8,7 @@ using Microsoft.Extensions.Logging;
 using IdeoTask.Models;
 using IdeoTask.Services.CatalogService;
 using IdeoTask.Services.Models;
+using IdeoTask.Services.Model;
 
 namespace IdeoTask.Controllers
 {
@@ -21,10 +22,16 @@ namespace IdeoTask.Controllers
         }
 
         [HttpGet]
-        public IActionResult Index()
+        public IActionResult Index(string? sort)
         {
             var categories = _catalogRepository.GetAllCatalogs();
-            var branches = _catalogRepository.GetBranches();
+            var branches = _catalogRepository.GetBranches(SortType.NameAsc);
+            if (sort == "NameAsc")
+                branches = _catalogRepository.GetBranches(SortType.NameAsc);
+            else if(sort == "NameDesc")
+                branches = _catalogRepository.GetBranches(SortType.NameDesc);
+            else if (sort == "DateAsc")
+                branches = _catalogRepository.GetBranches(SortType.DateAsc);
             var result = new CatalogViewModel
             {
                 BranchList = branches,
@@ -48,12 +55,7 @@ namespace IdeoTask.Controllers
         public ActionResult Create(CatalogViewModel catalog)
         {
             _catalogRepository.AddCatalog(catalog.NewCatalog);
-            var branches = _catalogRepository.GetBranches();
-            var result = new CatalogViewModel
-            {
-                BranchList = branches
-            };
-            return View("Index", result);
+            return RedirectToAction(nameof(Index));
         }
 
         [HttpGet]
@@ -71,12 +73,7 @@ namespace IdeoTask.Controllers
         public ActionResult Edit(CatalogViewModel catalog)
         {
             _catalogRepository.UpdateCatalog(catalog.SelectedCatalog);
-            var branches = _catalogRepository.GetBranches();
-            var result = new CatalogViewModel
-            {
-                BranchList = branches
-            };
-            return View("Index", result);
+            return RedirectToAction(nameof(Index));
         }
 
         [HttpGet]

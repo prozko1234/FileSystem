@@ -9,8 +9,6 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IdeoTask.Services", "IdeoTa
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IdeoTask.EntityFramework", "IdeoTask.EntityFramework\IdeoTask.EntityFramework.csproj", "{4342E529-CF5F-4DDE-BBF1-8C18034197DE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IdeoTask.Logic", "IdeoTask.Logic\IdeoTask.Logic.csproj", "{1FB20FEE-AFAE-4C1F-8FE8-90E9BE64A5FE}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -29,10 +27,6 @@ Global
 		{4342E529-CF5F-4DDE-BBF1-8C18034197DE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4342E529-CF5F-4DDE-BBF1-8C18034197DE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4342E529-CF5F-4DDE-BBF1-8C18034197DE}.Release|Any CPU.Build.0 = Release|Any CPU
-		{1FB20FEE-AFAE-4C1F-8FE8-90E9BE64A5FE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{1FB20FEE-AFAE-4C1F-8FE8-90E9BE64A5FE}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{1FB20FEE-AFAE-4C1F-8FE8-90E9BE64A5FE}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{1FB20FEE-AFAE-4C1F-8FE8-90E9BE64A5FE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

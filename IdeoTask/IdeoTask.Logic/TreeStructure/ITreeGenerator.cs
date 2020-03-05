@@ -7,6 +7,6 @@ namespace IdeoTask.Logic.TreeStructure
 {
     public interface ITreeGenerator
     {
-        List<Branch> GetTrees();
+        List<Branch> SortTree(SortType sortType, List<Branch> branches);
     }
 }

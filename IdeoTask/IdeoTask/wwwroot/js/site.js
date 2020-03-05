@@ -1,6 +1,7 @@
 ﻿var createUrl = '/Home/Create?';
 var deleteUrl = '/Home/Delete?';
 var editUrl = '/Home/Edit?';
+var indexUrl = '/Home/Index?';
 
 $(function() {
     //Calling create partial view
@@ -57,6 +58,13 @@ $(function() {
                 $('#funcBlock').html(result);
             });
         });
+    //Calling Index view with sorting 
+  
+    $('.sortBtn').click(function () {
+            var $buttonClicked = $(this);
+            var sortType = $buttonClicked.attr('value');
+            window.location = '/Home/Index?sort=' + sortType;
+    });
     // Showing and hiding tree branches
     $('.treeElementIcon').click(function() {
         $(this).toggleClass('down')

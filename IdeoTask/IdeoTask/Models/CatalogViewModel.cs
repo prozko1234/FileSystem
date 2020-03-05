@@ -13,6 +13,6 @@ namespace IdeoTask.Models
         public List<Catalog> Catalogs { get; set; }
         public Catalog SelectedCatalog { get; set; }
         public Catalog NewCatalog { get; set; }
-        public string ModalWindowMessage { get; set; }
+        public SortType SortType { get; set; }
     }
 }

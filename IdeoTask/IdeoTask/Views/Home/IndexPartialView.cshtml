@@ -1,5 +1,6 @@
 ﻿@model IdeoTask.Models.CatalogViewModel
 @namespace IdeoTask.Services.DTO
+
 @foreach (var item in Model.BranchList)
 {
     <ul class="treeElement">
@@ -11,12 +12,12 @@
                 <a data-id="@item.Id" class="createAnchor" href="javascript:void(0);">
                     <i class="fa fa-plus-square-o" aria-hidden="true"></i>
                 </a>
-                <a data-id="@item.Id" class="deleteAnchor" href="javascript:void(0);">
-                    <i class="fa fa-trash-o" aria-hidden="true"></i>
-                </a>
             }
             <a data-id="@item.Id" class="editAnchor" href="javascript:void(0);">
                 <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+            </a>
+            <a data-id="@item.Id" class="deleteAnchor" href="javascript:void(0);">
+                <i class="fa fa-trash-o" aria-hidden="true"></i>
             </a>
         </li>
 
